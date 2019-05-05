@@ -1,4 +1,8 @@
 pipeline {
+    parameters {
+        string(name: 'JENKINS_USER_ID', defaultValue: '1000')
+        string(name: 'JENKINS_GROUP_ID', defaultValue: '1000')
+    }
     environment {
         docker_image_name = "python3-unittests"
         //HTTP_PROXY = "${params.HTTP_PROXY}"
